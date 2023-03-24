@@ -8,7 +8,6 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any, Collection, Dict, List, Optional, Tuple, Union
 
-import fcd
 import joblib
 import matplotlib.pyplot as plt
 import numpy as np
@@ -280,7 +279,7 @@ class FrechetBenchmark:
 
         logger.info(f"Saved ChemNet model to '{model_path}'")
 
-        return fcd.load_ref_model(model_path)
+        #return fcd.load_ref_model(model_path)
 
     def score(self, generated_molecules: List[str]):
         chemnet = self._load_chemnet()
